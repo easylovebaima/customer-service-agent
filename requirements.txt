@@ -1,0 +1,30 @@
+# ── Web 服务 ──
+fastapi>=0.115
+uvicorn[standard]>=0.30
+
+# ── Web 界面（与后端通过 HTTP 解耦，独立进程运行）──
+gradio>=4.44
+
+# ── 编排：LangChain 用来组织提示词与步骤 ──
+# 这里刻意**只装 langchain-core 与 langchain-openai**，不装 langchain /
+# langchain-community 元包，原因有两条：
+#   1. 本项目不需要它们提供的向量库与第三方集成（向量检索是自己实现的，
+#      见 core/rag/vectorstore.py）
+#   2. 它们会拉进 zstandard，而 zstandard 在 Windows 上需要 MSVC 才能编译，
+#      会让一份"能直接 pip install 跑起来"的项目变得难以安装
+langchain-core>=0.3
+langchain-openai>=0.2
+
+# ── 持久化：ORM 统一 PostgreSQL 与 SQLite ──
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+
+# ── HTTP 客户端（Gradio 调后端 / 接口测试）──
+httpx>=0.27
+
+# ── 其他 ──
+python-dotenv>=1.0
+numpy>=1.26
+
+# ── 测试 ──
+pytest>=8.0

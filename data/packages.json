@@ -1,0 +1,94 @@
+{
+  "updated_at": "2026-10",
+  "currency": "CNY",
+  "packages": [
+    {
+      "id": "P001",
+      "name": "畅享19",
+      "price": 19.0,
+      "billing": "月付",
+      "data_gb": 5,
+      "valid_days": 30,
+      "network": "5G",
+      "tags": ["低月租", "入门", "轻度使用"],
+      "note": "超出后按 3 元/GB 计费，当月流量费用最高 30 元封顶"
+    },
+    {
+      "id": "P002",
+      "name": "畅享39",
+      "price": 39.0,
+      "billing": "月付",
+      "data_gb": 20,
+      "valid_days": 30,
+      "network": "5G",
+      "tags": ["性价比", "中度使用", "主流"],
+      "note": "超出后按 3 元/GB 计费，当月流量费用最高 30 元封顶"
+    },
+    {
+      "id": "P003",
+      "name": "畅享59",
+      "price": 59.0,
+      "billing": "月付",
+      "data_gb": 40,
+      "valid_days": 30,
+      "network": "5G",
+      "tags": ["重度使用", "含通话", "推荐"],
+      "note": "含 200 分钟国内通话，超出后 0.15 元/分钟"
+    },
+    {
+      "id": "P004",
+      "name": "畅享99",
+      "price": 99.0,
+      "billing": "月付",
+      "data_gb": 100,
+      "valid_days": 30,
+      "network": "5G",
+      "tags": ["大流量", "重度使用", "含通话"],
+      "note": "含 500 分钟国内通话，超出后 0.15 元/分钟；支持 2 张副卡"
+    },
+    {
+      "id": "P005",
+      "name": "日租卡",
+      "price": 1.0,
+      "billing": "日付",
+      "data_gb": 1,
+      "valid_days": 1,
+      "network": "4G/5G",
+      "tags": ["按天计费", "备用", "低频"],
+      "note": "当日不使用不扣费，适合偶尔上网的备用卡"
+    },
+    {
+      "id": "P006",
+      "name": "视频定向包",
+      "price": 9.0,
+      "billing": "月付",
+      "data_gb": 30,
+      "valid_days": 30,
+      "network": "5G",
+      "tags": ["定向流量", "视频", "加装包"],
+      "note": "仅限指定视频类 App 使用，不含通用流量；需已有主套餐"
+    },
+    {
+      "id": "P007",
+      "name": "季度畅享包",
+      "price": 100.0,
+      "billing": "季付",
+      "data_gb": 60,
+      "valid_days": 90,
+      "network": "5G",
+      "tags": ["长期", "优惠", "折合月付33元"],
+      "note": "一次性支付 100 元，90 天内有效；折合月均约 33 元"
+    },
+    {
+      "id": "P008",
+      "name": "学生专享包",
+      "price": 29.0,
+      "billing": "月付",
+      "data_gb": 30,
+      "valid_days": 30,
+      "network": "5G",
+      "tags": ["学生", "优惠", "需认证"],
+      "note": "需通过学信网学生身份认证；在校期间可续订"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# 一键启动 PostgreSQL。
+# 简历里写的是 PostgreSQL 持久化，而本地不一定装了 PG —— 用这个起一个最省事。
+#
+#   docker compose up -d       启动
+#   docker compose logs -f     看日志
+#   docker compose down        停止（数据保留在 volume 里）
+#
+# 启动后把 .env 的 DATABASE_URL 设为：
+#   postgresql+psycopg2://postgres:postgres@localhost:5432/cs_agent
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: cs_agent_pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cs_agent
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:
